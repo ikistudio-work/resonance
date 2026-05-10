@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Resonance — Strategic Brand Partner for Medical Innovation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#090c11;--surface:#0f131b;--surface2:#131820;
+  --border:rgba(255,255,255,0.06);--border-hi:rgba(99,179,237,0.2);
+  --text:#edf2f7;--text2:#7a8fa0;--text3:#3d5060;
+  --accent:#63b3ed;--warm:#c3b091;--glow:rgba(99,179,237,0.08);
+  --rule:rgba(255,255,255,0.05);--red:#f87171;--green:#6ee7b7;
+}
+html{font-size:15px}
+body{background:var(--bg);color:var(--text);font-family:'Inter',sans-serif;font-weight:400;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 70% 45% at 50% -5%,rgba(99,179,237,0.07) 0%,transparent 65%);pointer-events:none;z-index:0}
+.wrap{max-width:880px;margin:0 auto;padding:0 36px;position:relative;z-index:1}
+
+/* NAV */
+nav{border-bottom:1px solid var(--rule);padding:20px 0}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;flex-direction:column;gap:3px}
+.logo-name{font-family:'DM Serif Display',serif;font-size:1.45rem;color:var(--text);letter-spacing:-0.3px;line-height:1}
+.logo-tag{font-size:0.62rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent)}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:0.78rem;color:var(--text2);text-decoration:none;transition:color .2s}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{font-size:0.75rem;font-weight:500;color:var(--accent);border:1px solid var(--border-hi);border-radius:6px;padding:7px 16px;text-decoration:none;transition:background .2s}
+.nav-cta:hover{background:var(--glow)}
+
+/* HERO */
+.hero{padding:80px 0 72px}
+.hero-label{font-size:0.65rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:22px}
+.hero-h1{font-family:'DM Serif Display',serif;font-size:2.5rem;font-weight:400;line-height:1.25;color:var(--text);max-width:700px;margin-bottom:22px}
+.hero-h1 em{font-style:italic;color:var(--warm)}
+.hero-sub{font-size:0.97rem;color:var(--text2);max-width:600px;line-height:1.8;margin-bottom:32px}
+.hero-pull{display:inline-block;font-size:0.82rem;font-style:italic;color:var(--text2);border-left:2px solid var(--accent);padding-left:16px;line-height:1.6;max-width:560px}
+
+/* SECTION LABEL */
+.slabel{font-size:0.64rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:30px;display:flex;align-items:center;gap:12px}
+.slabel::after{content:'';flex:1;height:1px;background:var(--rule)}
+section{padding:64px 0}
+section+section{border-top:1px solid var(--rule)}
+
+/* BEFORE / AFTER */
+.ba-intro{font-size:0.9rem;color:var(--text2);margin-bottom:36px;max-width:560px;line-height:1.75}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.ba-col{background:var(--surface);padding:30px 28px 36px}
+.ba-col-title{font-size:0.7rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.ba-col-title .dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.before .ba-col-title{color:var(--text3)}
+.before .ba-col-title .dot{background:var(--red);opacity:.6}
+.after .ba-col-title{color:var(--accent)}
+.after .ba-col-title .dot{background:var(--green)}
+.ba-items{list-style:none;display:flex;flex-direction:column;gap:14px}
+.ba-items li{font-size:0.83rem;color:var(--text2);padding-left:16px;position:relative;line-height:1.65}
+.before .ba-items li::before{content:'—';position:absolute;left:0;color:var(--text3)}
+.after .ba-items li::before{content:'→';position:absolute;left:0;color:var(--green);font-size:.75rem}
+.after .ba-items li{color:#a8d9c4}
+
+/* SERVICES */
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.svc-block{background:var(--surface);padding:26px 22px 30px;transition:background .2s}
+.svc-block:hover{background:var(--surface2)}
+.svc-tier{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--text3);margin-bottom:7px}
+.svc-title{font-size:0.95rem;font-weight:500;color:var(--text);margin-bottom:16px;line-height:1.3}
+.svc-list{list-style:none;display:flex;flex-direction:column;gap:8px}
+.svc-list li{font-size:0.77rem;color:var(--text2);padding-left:14px;position:relative;line-height:1.5}
+.svc-list li::before{content:'—';position:absolute;left:0;color:var(--text3);font-size:.7rem}
+
+/* WHO */
+.who-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.who-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:22px 22px 26px;transition:border-color .2s,background .2s}
+.who-card:hover{border-color:var(--border-hi);background:var(--surface2)}
+.who-card-title{font-size:0.85rem;font-weight:500;color:var(--text);margin-bottom:6px}
+.who-card-trigger{font-size:0.72rem;font-style:italic;color:var(--accent);margin-bottom:12px;opacity:.85}
+.who-card-body{font-size:0.78rem;color:var(--text2);line-height:1.65}
+
+/* DIFF */
+.diff-list{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+.diff-item{background:var(--surface);padding:22px 28px;display:grid;grid-template-columns:190px 1fr;gap:20px;align-items:start;transition:background .2s}
+.diff-item:hover{background:var(--surface2)}
+.diff-label{font-size:0.8rem;font-weight:500;color:var(--text);display:flex;align-items:center;gap:10px}
+.diff-label::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0}
+.diff-body{font-size:0.8rem;color:var(--text2);line-height:1.72}
+
+/* ENGAGE */
+.engage-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.engage-card{border:1px solid var(--border);border-radius:10px;padding:22px 22px 26px;background:var(--surface);transition:border-color .2s}
+.engage-card:hover{border-color:var(--border-hi)}
+.engage-type{font-size:0.63rem;font-weight:600;letter-spacing:.17em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+.engage-name{font-size:0.9rem;font-weight:500;color:var(--text);margin-bottom:8px}
+.engage-desc{font-size:0.78rem;color:var(--text2);line-height:1.65}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:14px;overflow:hidden}
+details{background:var(--surface)}
+details+details{border-top:1px solid var(--rule)}
+summary{padding:18px 24px;font-size:0.85rem;font-weight:500;color:var(--text);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;transition:background .2s}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--surface2)}
+summary::after{content:'+';font-size:1.1rem;color:var(--accent);font-weight:300;flex-shrink:0;transition:transform .2s}
+details[open] summary::after{content:'−'}
+.faq-body{padding:0 24px 20px;font-size:0.8rem;color:var(--text2);line-height:1.8}
+.faq-intro{font-size:0.9rem;color:var(--text2);margin-bottom:28px;line-height:1.75;max-width:600px}
+
+/* FOOTER */
+.footer{padding:48px 0 64px;border-top:1px solid var(--rule)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between}
+.footer-note{font-size:0.78rem;color:var(--text2);line-height:1.8;max-width:460px}
+.footer-cta-group{text-align:right}
+.footer-cta-label{font-size:0.65rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text3);margin-bottom:5px}
+.footer-cta-link{font-size:0.9rem;font-weight:500;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--border-hi);padding-bottom:2px;transition:color .2s}
+.footer-cta-link:hover{color:#93c5fd}
+
+@media(max-width:680px){
+  .wrap{padding:0 20px}
+  .hero-h1{font-size:1.8rem}
+  .ba-grid,.svc-grid,.who-grid,.engage-grid{grid-template-columns:1fr}
+  .diff-item{grid-template-columns:1fr;gap:6px}
+  .nav-links{display:none}
+  .footer-inner{flex-direction:column;gap:24px}
+  .footer-cta-group{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap"><div class="nav-inner">
+  <div class="logo">
+    <span class="logo-name">Resonance</span>
+    <span class="logo-tag">Strategic Brand Partner</span>
+  </div>
+  <div class="nav-links">
+    <a href="#services">What We Do</a>
+    <a href="#who">Who We Serve</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <a href="mailto:hello@resonance.agency" class="nav-cta">Get in touch</a>
+</div></div></nav>
+
+<!-- HERO -->
+<div class="wrap">
+<section class="hero" id="hero">
+  <div class="hero-label">Medical Device · Health Technology · Pharma</div>
+  <h1 class="hero-h1">We build brand systems for companies operating at the edge of <em>medicine and market.</em></h1>
+  <p class="hero-sub">The medical industry has a structural trust problem. Clinical audiences distrust marketing. Investors distrust science they can't read. Regulators define the floor — brand defines the ceiling. Resonance sits at that ceiling.</p>
+  <p class="hero-pull">We translate scientific complexity into commercial conviction. The mechanism: clinical credibility built through brand architecture — not through ad spend.</p>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section id="before-after">
+  <div class="slabel">The before &amp; after</div>
+  <p class="ba-intro">Here's what we hear in every first conversation — and what changes after we've worked together.</p>
+  <div class="ba-grid">
+    <div class="ba-col before">
+      <div class="ba-col-title"><span class="dot"></span>Before Resonance</div>
+      <ul class="ba-items">
+        <li>Your science is more advanced than your story. Everyone who's seen the product is impressed. Almost no one outside can explain what it does or why it matters.</li>
+        <li>Your brand was built by a generalist who'd never been in a cath lab or a fundraise room.</li>
+        <li>You cleared FDA or CE mark and still don't have a sentence that differentiates you from the competitive set.</li>
+        <li>Your pitch deck, your website, and your clinical materials look and feel like three different companies.</li>
+        <li>Naming and messaging were decided under pressure during your seed round. Now they're structural liabilities you're trying to work around.</li>
+        <li>You're entering a new market — US to Europe, or Europe to India — and nobody has built the brand for it.</li>
+      </ul>
+    </div>
+    <div class="ba-col after">
+      <div class="ba-col-title"><span class="dot"></span>After Resonance</div>
+      <ul class="ba-items">
+        <li>Your brand speaks fluently to physicians, investors, and KOLs — from the same system, with the same conviction.</li>
+        <li>Clinical audiences read your communications and recognise the scientific rigour behind the claims.</li>
+        <li>You enter every room — fundraise, conference, physician meeting — with a coherent identity that precedes you.</li>
+        <li>Your naming, evidence architecture, and visual language are aligned across every touchpoint.</li>
+        <li>The brand your company carries into its next market or funding round is a strategic asset, not a catch-up cost.</li>
+        <li>Your multi-market expansion has a brand system designed for how trust works differently in each geography.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="slabel">What We Do</div>
+  <div class="svc-grid">
+    <div class="svc-block">
+      <div class="svc-tier">01 — Strategy</div>
+      <div class="svc-title">Brand &amp; Positioning</div>
+      <ul class="svc-list">
+        <li>Category design &amp; positioning</li>
+        <li>Naming &amp; naming architecture</li>
+        <li>Investor narrative alignment</li>
+        <li>KOL / HCP message architecture</li>
+        <li>Clinical evidence communication framework</li>
+      </ul>
+    </div>
+    <div class="svc-block">
+      <div class="svc-tier">02 — Identity</div>
+      <div class="svc-title">Visual Brand Systems</div>
+      <ul class="svc-list">
+        <li>Identity for clinical &amp; commercial contexts</li>
+        <li>Product &amp; portfolio brand architecture</li>
+        <li>Conference &amp; event identity</li>
+        <li>Scientific communication design</li>
+        <li>SaMD interface &amp; UX brand alignment</li>
+      </ul>
+    </div>
+    <div class="svc-block">
+      <div class="svc-tier">03 — Activation</div>
+      <div class="svc-title">Launch &amp; Market Entry</div>
+      <ul class="svc-list">
+        <li>FDA clearance &amp; CE mark launches</li>
+        <li>HCP education platform design</li>
+        <li>Investor &amp; roadshow brand materials</li>
+        <li>Conference exhibitor strategy &amp; experience</li>
+        <li>Multi-market brand entry (US / EU / India)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section id="who">
+  <div class="slabel">Who We're Built For</div>
+  <div class="who-grid">
+    <div class="who-card">
+      <div class="who-card-title">Medtech &amp; Digital Health Startups</div>
+      <div class="who-card-trigger">Seed through Series B</div>
+      <div class="who-card-body">Science-first founders who have a strong product and a weak story. You're approaching a raise, clearance, or first commercial launch — and your brand hasn't kept pace with your science.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-card-title">Strategics with New Pipelines</div>
+      <div class="who-card-trigger">Post-M&amp;A or new indication launch</div>
+      <div class="who-card-body">Large medtech and pharma companies managing brand collapse after acquisition, or launching a new product line that can't live inside the parent brand without its own architecture.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-card-title">Funds &amp; Incubators</div>
+      <div class="who-card-trigger">Portfolio-wide brand infrastructure</div>
+      <div class="who-card-body">You fund companies but don't give them brand support. Portfolio companies get to Series A with weak identities built under pressure. A systematic brand program across the portfolio changes that.</div>
+    </div>
+    <div class="who-card">
+      <div class="who-card-title">University Spin-outs &amp; Labs</div>
+      <div class="who-card-trigger">Pre-commercialisation</div>
+      <div class="who-card-body">Technology ready for translation, but no commercial identity. Tech transfer offices have no brand muscle. The spin-out needs positioning, naming, and an investor-facing narrative before it enters the market.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFF -->
+<section id="diff">
+  <div class="slabel">What Makes Us Different</div>
+  <div class="diff-list">
+    <div class="diff-item">
+      <div class="diff-label">Clinical Credibility Built In</div>
+      <div class="diff-body">Our advisory includes a practicing neurointerventionist active across US, European, and Indian clinical networks. Brand claims are pressure-tested against real physician scrutiny — not just reviewed for compliance. This is what produces communication architectures that earn peer trust.</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Medtech-Fluent Design</div>
+      <div class="diff-body">Our creative director has worked inside Seed-to-Series A medtech firms. No education curve on clinical visual languages, investor deck dynamics, or designing simultaneously for the physician and the fund — the dual-audience problem every early-stage medtech company faces.</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Strategy-First, Upstream</div>
+      <div class="diff-body">We don't manage campaigns, run social, or produce trade show materials. We architect the brand system and positioning framework that makes all of that work. We stay upstream. Clients who need execution vendors get referrals.</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Cross-Market Intelligence</div>
+      <div class="diff-body">What earns trust in an FDA context — robust RCT data, peer publication — lands differently in markets where KOL endorsement and government hospital adoption dominate. We design brand systems that work across US, EU, and India at the architecture level, not as a localization afterthought.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ENGAGE -->
+<section id="engage">
+  <div class="slabel">How to Engage</div>
+  <div class="engage-grid">
+    <div class="engage-card">
+      <div class="engage-type">Fixed-scope</div>
+      <div class="engage-name">Brand Sprint</div>
+      <div class="engage-desc">Defined output, defined timeline. Covers category positioning, naming review, and a messaging architecture framework. Entry point for most startup engagements. Scoped to close in weeks, not months.</div>
+    </div>
+    <div class="engage-card">
+      <div class="engage-type">Project</div>
+      <div class="engage-name">Identity &amp; Launch System</div>
+      <div class="engage-desc">Full visual brand system built for clinical and commercial dual use — from FDA clearance to conference season. Priced per deliverable, not by hours.</div>
+    </div>
+    <div class="engage-card">
+      <div class="engage-type">Advisory</div>
+      <div class="engage-name">Strategic Brand Retainer</div>
+      <div class="engage-desc">Monthly strategic input and clinical advisory access. Not a production retainer — designed for companies that need a senior brand thinking partner, not a team of executors.</div>
+    </div>
+    <div class="engage-card">
+      <div class="engage-type">Portfolio</div>
+      <div class="engage-name">Fund / Incubator Program</div>
+      <div class="engage-desc">A systematic brand sprint model applied across portfolio companies. One fund relationship, multiple companies served. Structured for efficiency across a cohort at the same stage.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="slabel">Questions We Get Asked</div>
+  <p class="faq-intro">The questions that come up in every first conversation — answered directly.</p>
+  <div class="faq-list">
+    <details>
+      <summary>What exactly is "brand architecture" — is this just logo design?</summary>
+      <div class="faq-body">No. Logo design is a deliverable inside a brand system. Brand architecture is the strategic framework upstream of it: how you define your category, your position within it, your naming logic, how you tier and present clinical evidence, what you claim and what you don't, and how your visual language translates across clinical and commercial contexts. We start with positioning before we design anything.</div>
+    </details>
+    <details>
+      <summary>We're pre-clearance / pre-CE mark. Is it too early to work with you?</summary>
+      <div class="faq-body">No — it's actually the right time. Brand decisions made under time pressure at clearance become structural liabilities. Companies that establish positioning, naming, and evidence communication architecture before clearance enter the market with a coherent identity instead of spending 12 months retroactively correcting it. We can work in parallel with your regulatory process without touching it.</div>
+    </details>
+    <details>
+      <summary>How do you work without knowing our specific regulatory situation?</summary>
+      <div class="faq-body">We don't do regulatory work — by design. Our role is brand architecture: positioning, naming, messaging frameworks, visual identity, and evidence communication systems. Everything we produce is reviewed for regulatory alignment by your team. We ensure it's commercially brave and clinically credible. You ensure it's compliant. Those are different jobs requiring different expertise.</div>
+    </details>
+    <details>
+      <summary>What does the "KOL advisory" mean in practice?</summary>
+      <div class="faq-body">Our advisory includes a practicing neurointerventionist active in US, European, and Indian clinical networks. On engagements where clinical credibility is central, they pressure-test messaging for physician-level authenticity — not regulatory approval. The question isn't "does this comply?" — it's "would a skeptical clinician in a peer conversation trust this?" Those require different expertise.</div>
+    </details>
+    <details>
+      <summary>We already have an internal marketing person or agency. Why engage Resonance?</summary>
+      <div class="faq-body">Most internal hires and generalist agencies operate downstream of brand strategy — managing campaigns, social, and production. We operate upstream: defining what you are, who you're for, and how you evidence it across clinical and commercial audiences. If brand architecture hasn't been established at the strategy level, everything downstream is building on an uncertain foundation.</div>
+    </details>
+    <details>
+      <summary>We're a large company. Are you set up to handle us?</summary>
+      <div class="faq-body">We work with strategics selectively, typically on discrete engagements: post-acquisition brand integration, a new pipeline sub-brand, or a product launch positioning sprint. We are not a large agency and don't pretend to be. What we bring to a large client is the strategic conviction and clinical intelligence a large agency typically can't. If you need 50-person account management, we're not the right fit.</div>
+    </details>
+    <details>
+      <summary>How long does an engagement take?</summary>
+      <div class="faq-body">Brand sprints run 3–6 weeks. Full identity systems and launch engagements run 8–16 weeks. Advisory retainers are ongoing. Sales cycles in this market are long by nature — the fastest path to starting is a 30-minute conversation to establish fit.</div>
+    </details>
+    <details>
+      <summary>Who is this NOT for?</summary>
+      <div class="faq-body">Companies looking for performance marketing, social media management, medical writing, or regulatory communications are better served elsewhere — those are not services we offer. Companies that need large-agency infrastructure, manage brand by committee, or treat brand as a compliance document will find our approach a poor fit. We work best with clients who treat brand as a strategic asset and want a small, senior team that operates with conviction.</div>
+    </details>
+    <details>
+      <summary>How do we start?</summary>
+      <div class="faq-body">A 30-minute conversation. We'll establish whether there's a fit before either party commits to anything. Reach us at hello@resonance.agency.</div>
+    </details>
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<div class="wrap">
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-note">We work with companies where brand precision is a commercial necessity — not a cosmetic consideration. If your next raise, launch, or market entry depends on how well clinicians and investors read you, that's the conversation we're built for.</p>
+    <div class="footer-cta-group">
+      <p class="footer-cta-label">Start a conversation</p>
+      <a href="mailto:hello@resonance.agency" class="footer-cta-link">hello@resonance.agency</a>
+    </div>
+  </div>
+</footer>
+</div>
+
+</body>
+</html>
