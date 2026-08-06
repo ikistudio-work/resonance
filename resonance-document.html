@@ -12,126 +12,125 @@
     background: #fafbfa;
     color: #1a1a1a;
     font-family: 'EB Garamond', Georgia, serif;
-    font-size: 1.05rem;
+    font-size: 1.12rem;
     line-height: 1.8;
     -webkit-font-smoothing: antialiased;
   }
   .page {
-    max-width: 740px;
-    margin: 40px auto;
-    padding: 80px 70px 100px;
+    max-width: 780px;
+    margin: 60px auto;
+    padding: 90px 80px 110px;
     background: #ffffff;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.015);
     border: 1px solid #eef2f0;
     border-radius: 4px;
   }
 
   /* HEADER */
   .doc-header {
-    margin-bottom: 56px;
+    margin-bottom: 60px;
     padding-bottom: 24px;
     border-bottom: 1px solid #0e4a3a;
   }
-  .doc-meta {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: #0e4a3a;
-    margin-bottom: 12px;
-  }
   .doc-title {
-    font-size: 1.25rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: -0.01em;
     color: #111;
-    margin-bottom: 6px;
-  }
-  .doc-subtitle {
-    font-size: 0.95rem;
-    font-style: italic;
-    color: #555;
   }
 
   /* THESIS / HERO */
   .thesis {
-    margin-bottom: 60px;
+    margin-bottom: 64px;
   }
   .thesis-headline {
-    font-size: 1.45rem;
-    font-weight: 700;
-    line-height: 1.4;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.45;
     color: #0e4a3a;
-    margin-bottom: 16px;
-    letter-spacing: -0.01em;
+    margin-bottom: 20px;
+    letter-spacing: -0.012em;
   }
   .highlight {
     background: #e7f3ef;
     color: #0e4a3a;
     padding: 2px 8px;
     border-radius: 4px;
-    font-weight: 700;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    display: inline-block;
   }
   .thesis-byline {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-style: italic;
-    color: #333;
+    color: #444;
     line-height: 1.6;
   }
 
-  /* SECTIONS */
+  /* EDITORIAL ASYMMETRIC GRID */
   .section {
-    margin-bottom: 48px;
+    display: flex;
+    margin-bottom: 56px;
+    gap: 48px;
+  }
+  .section-sidebar {
+    width: 25%;
+    flex-shrink: 0;
+  }
+  .section-content {
+    flex-grow: 1;
+    width: 75%;
   }
   .section-title {
     font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 20px;
+    letter-spacing: 0.12em;
     color: #0e4a3a;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: #e1e8e5;
+    margin-bottom: 0;
+    position: sticky;
+    top: 40px;
   }
 
-  /* LISTS */
-  ul {
-    list-style: none;
+  /* CONTENT ITEMS */
+  .item-block {
+    margin-bottom: 28px;
   }
-  ul li {
-    font-size: 1rem;
-    line-height: 1.75;
-    margin-bottom: 16px;
-    position: relative;
-    padding-left: 20px;
+  .item-block:last-child {
+    margin-bottom: 0;
+  }
+  .item-headline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+  }
+  .item-body {
+    font-size: 1.05rem;
     color: #2b2b2b;
+    line-height: 1.75;
   }
-  ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #0e4a3a;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  ul li:last-child { margin-bottom: 0; }
-  
-  strong { font-weight: 700; color: #111; }
-  em { font-style: italic; }
 
-  /* WHAT WE DO / HOW WE FIT IN GRID-FREE FLOW */
+  /* CALLOUT BOX FOR DIVERSIFIED LAYOUT */
+  .callout-box {
+    background: #f6faf8;
+    border-left: 3px solid #0e4a3a;
+    padding: 24px 28px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .callout-box .item-headline {
+    color: #0e4a3a;
+    font-size: 1.15rem;
+  }
+
+  /* SERVICES FLOW */
   .service-item {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
     border-bottom: 1px dashed #e1e8e5;
   }
   .service-item:last-child {
@@ -139,35 +138,44 @@
     padding-bottom: 0;
     border-bottom: none;
   }
-  .service-title-text {
+  .service-meta {
     font-family: 'Inter', sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.65rem;
     font-weight: 700;
-    color: #111;
+    color: #0e4a3a;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     margin-bottom: 6px;
   }
+  .service-title-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 8px;
+  }
   .service-desc {
-    font-size: 0.95rem;
-    color: #333;
+    font-size: 1.05rem;
+    color: #2b2b2b;
   }
 
-  /* ENGAGEMENT FLOW (NO TABLES) */
+  /* ENGAGEMENT CARD FLOW */
   .engage-flow {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
   .engage-step {
-    padding: 20px;
-    background: #f7f9f8;
-    border-left: 3px solid #0e4a3a;
-    border-radius: 0 4px 4px 0;
+    padding: 24px 28px;
+    background: #f7faf8;
+    border: 1px solid #eef2f0;
+    border-radius: 6px;
+    transition: transform 0.2s, box-shadow 0.2s;
   }
   .engage-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .engage-title {
     font-family: 'Inter', sans-serif;
@@ -177,22 +185,22 @@
   }
   .engage-meta {
     font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #555;
-    font-weight: 500;
+    color: #666;
+    font-weight: 600;
   }
   .engage-desc-text {
-    font-size: 0.95rem;
-    color: #333;
-    line-height: 1.65;
+    font-size: 1.02rem;
+    color: #2b2b2b;
+    line-height: 1.7;
   }
 
   /* FOOTER */
   .doc-footer {
-    margin-top: 64px;
-    padding-top: 32px;
+    margin-top: 72px;
+    padding-top: 36px;
     border-top: 1px solid #0e4a3a;
     display: flex;
     justify-content: space-between;
@@ -200,10 +208,10 @@
     gap: 48px;
   }
   .doc-footer-note {
-    font-size: 0.95rem;
-    color: #333;
+    font-size: 1.05rem;
+    color: #444;
     line-height: 1.7;
-    max-width: 420px;
+    max-width: 440px;
     font-style: italic;
   }
   .doc-footer-cta {
@@ -217,7 +225,7 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
     color: #0e4a3a;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .doc-footer-cta a {
     font-family: 'Inter', sans-serif;
@@ -226,7 +234,7 @@
     color: #ffffff;
     background: #0e4a3a;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 11px 24px;
     border-radius: 4px;
     display: inline-block;
     transition: background 0.2s;
@@ -235,15 +243,36 @@
     background: #0a362a;
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 720px) {
     .page { padding: 48px 32px 64px; margin: 20px 10px; }
+    .section { flex-direction: column; gap: 16px; }
+    .section-sidebar, .section-content { width: 100%; }
     .doc-footer { flex-direction: column; gap: 28px; }
     .doc-footer-cta { text-align: left; }
   }
+  
   @media print {
-    body { background: #fff; }
-    .page { padding: 0; max-width: 100%; border: none; box-shadow: none; margin: 0; }
-    .doc-footer-cta a { color: #0e4a3a; border: 1px solid #0e4a3a; background: none; padding: 0; }
+    @page {
+      margin: 0;
+    }
+    body {
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      padding: 80px 70px;
+      max-width: 100%;
+      border: none;
+      box-shadow: none;
+      margin: 0;
+    }
+    .doc-footer-cta a {
+      color: #0e4a3a;
+      border: 1px solid #0e4a3a;
+      background: none;
+      padding: 0;
+    }
   }
 </style>
 </head>
@@ -263,77 +292,123 @@
 
   <!-- THE PROBLEM -->
   <div class="section">
-    <h2 class="section-title">The Problem</h2>
-    <ul>
-      <li><strong>Structural clinical distrust.</strong> Clinical audiences distrust marketing by default; investors distrust science they cannot easily parse. The gap between clinical credibility and commercial clarity is widening.</li>
-      <li><strong>The generalist penalty.</strong> Most life science companies launch with <span class="highlight">brand systems</span> built under pressure by generalists who have never been at the clinical front line. These early assets are rarely revisited—until they become active liabilities.</li>
-      <li><strong>Clearance without clarity.</strong> Companies frequently clear regulatory hurdles yet struggle to articulate their differentiator. Seed-round names become structural liabilities at Series B, and <span class="highlight">visual assets</span> fail the dual test of physician credibility and investor confidence.</li>
-    </ul>
+    <div class="section-sidebar">
+      <h2 class="section-title">The Problem</h2>
+    </div>
+    <div class="section-content">
+      <div class="item-block">
+        <h3 class="item-headline">Structural clinical distrust</h3>
+        <p class="item-body">Clinical audiences distrust marketing by default; investors distrust science they cannot easily parse. The gap between clinical credibility and commercial clarity is widening.</p>
+      </div>
+      <div class="item-block">
+        <h3 class="item-headline">The generalist penalty</h3>
+        <p class="item-body">Most life science companies launch with <span class="highlight">brand systems</span> built under pressure by generalists who have never been at the clinical front line. These early assets are rarely revisited—until they become active liabilities.</p>
+      </div>
+      <div class="item-block">
+        <h3 class="item-headline">Clearance without clarity</h3>
+        <p class="item-body">Companies frequently clear regulatory hurdles yet struggle to articulate their differentiator. Seed-round names become structural liabilities at Series B, and <span class="highlight">visual assets</span> fail the dual test of physician credibility and investor confidence.</p>
+      </div>
+    </div>
   </div>
 
   <!-- THE OPPORTUNITY -->
   <div class="section">
-    <h2 class="section-title">The Opportunity</h2>
-    <ul>
-      <li><strong>Unifying clinical validation and investor conviction.</strong> The opportunity to align your narrative for your two most critical, yet divergent, audiences. A structured brand architecture builds immediate trust with skeptical clinicians while presenting commercial scale to investors.</li>
-      <li><strong>Establishing category authority early.</strong> Moving beyond regulatory clearance to define and own your market category. By translating scientific complexity into commercial conviction before launch, you pre-empt market friction and match your story to the sophistication of your science.</li>
-      <li><strong>De-risking launch and market entry.</strong> <span class="highlight">Aligning all visual and narrative touchpoints</span> before scaling your sales force or marketing spend. Ensuring your website, investor decks, publications, and conference presence all project the same scientific rigor maximizes launch impact and eliminates confusion.</li>
-    </ul>
+    <div class="section-sidebar">
+      <h2 class="section-title">The Opportunity</h2>
+    </div>
+    <div class="section-content">
+      <div class="item-block">
+        <h3 class="item-headline">Unifying clinical validation and investor conviction</h3>
+        <p class="item-body">The opportunity to align your narrative for your two most critical, yet divergent, audiences. A structured brand architecture builds immediate trust with skeptical clinicians while presenting commercial scale to investors.</p>
+      </div>
+      <div class="item-block">
+        <h3 class="item-headline">Establishing category authority early</h3>
+        <p class="item-body">Moving beyond regulatory clearance to define and own your market category. By translating scientific complexity into commercial conviction before launch, you pre-empt market friction and match your story to the sophistication of your science.</p>
+      </div>
+      <div class="item-block">
+        <h3 class="item-headline">De-risking launch and market entry</h3>
+        <p class="item-body"><span class="highlight">Aligning all visual and narrative touchpoints</span> before scaling your sales force or marketing spend. Ensuring your website, investor decks, publications, and conference presence all project the same scientific rigor maximizes launch impact and eliminates confusion.</p>
+      </div>
+    </div>
   </div>
 
   <!-- HOW WE FIT IN / WHO WE ARE -->
   <div class="section">
-    <h2 class="section-title">How We Fit In</h2>
-    <ul>
-      <li><strong>Domain specialists.</strong> We are a small, senior collective of vetted practitioners who have worked inside early-stage medtech and pharma firms. We build <span class="highlight">brand systems</span> specifically for the intersection of medicine and market.</li>
-      <li><strong>Clinical authentication.</strong> Our advisory includes a practicing physician active across US, European, and Indian clinical networks. We pressure-test claims for physician-level authenticity: <em>"Would a skeptical clinician trust this in a peer conversation?"</em></li>
-      <li><strong>Upstream positioning.</strong> We define what a company is, who it is for, and how it proves its value. We operate upstream, before campaigns or execution; clients needing execution vendors receive trusted referrals.</li>
-    </ul>
+    <div class="section-sidebar">
+      <h2 class="section-title">How We Fit In</h2>
+    </div>
+    <div class="section-content">
+      <div class="item-block">
+        <h3 class="item-headline">Domain specialists</h3>
+        <p class="item-body">We are a small, senior collective of vetted practitioners who have worked inside early-stage medtech and pharma firms. We build <span class="highlight">brand systems</span> specifically for the intersection of medicine and market.</p>
+      </div>
+      
+      <div class="callout-box">
+        <h3 class="item-headline">Clinical authentication</h3>
+        <p class="item-body">Our advisory includes a practicing physician active across US, European, and Indian clinical networks. We pressure-test claims for physician-level authenticity: <em>"Would a skeptical clinician trust this in a peer conversation?"</em></p>
+      </div>
+
+      <div class="item-block">
+        <h3 class="item-headline">Upstream positioning</h3>
+        <p class="item-body">We define what a company is, who it is for, and how it proves its value. We operate upstream, before campaigns or execution; clients needing execution vendors receive trusted referrals.</p>
+      </div>
+    </div>
   </div>
 
   <!-- WHAT WE DO -->
   <div class="section">
-    <h2 class="section-title">What We Do</h2>
-    <div class="service-item">
-      <h3 class="service-title-text">01. Strategy — Brand &amp; Positioning</h3>
-      <p class="service-desc">Category design, positioning, naming architecture, investor narratives, HCP messaging, and clinical evidence frameworks.</p>
+    <div class="section-sidebar">
+      <h2 class="section-title">What We Do</h2>
     </div>
-    <div class="service-item">
-      <h3 class="service-title-text">02. Identity — Visual Brand Systems</h3>
-      <p class="service-desc"><span class="highlight">Visual assets</span> for clinical and commercial use, portfolio architecture, conference identity, scientific communication, animation &amp; video, digital brand, and SaMD UI brand alignment.</p>
-    </div>
-    <div class="service-item">
-      <h3 class="service-title-text">03. Activation — Launch &amp; Market Entry</h3>
-      <p class="service-desc">Market entry strategy, roadshow/investor materials, conference exhibitor strategy, and cross-border launch (US, EU, India).</p>
+    <div class="section-content">
+      <div class="service-item">
+        <div class="service-meta">01. Strategy</div>
+        <h3 class="service-title-text">Brand &amp; Positioning</h3>
+        <p class="service-desc">Category design, positioning, naming architecture, investor narratives, HCP messaging, and clinical evidence frameworks.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-meta">02. Identity</div>
+        <h3 class="service-title-text">Visual Brand Systems</h3>
+        <p class="service-desc"><span class="highlight">Visual assets</span> for clinical and commercial use, portfolio architecture, conference identity, scientific communication, animation &amp; video, digital brand, and SaMD UI brand alignment.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-meta">03. Activation</div>
+        <h3 class="service-title-text">Launch &amp; Market Entry</h3>
+        <p class="service-desc">Market entry strategy, roadshow/investor materials, conference exhibitor strategy, and cross-border launch (US, EU, India).</p>
+      </div>
     </div>
   </div>
 
   <!-- HOW TO ENGAGE -->
   <div class="section">
-    <h2 class="section-title">How We Engage</h2>
-    <div class="engage-flow">
-      <div class="engage-step">
-        <div class="engage-header">
-          <div class="engage-title">Brand Sprint</div>
-          <div class="engage-meta">Fixed-Scope / 3–6 Weeks</div>
+    <div class="section-sidebar">
+      <h2 class="section-title">How We Engage</h2>
+    </div>
+    <div class="section-content">
+      <div class="engage-flow">
+        <div class="engage-step">
+          <div class="engage-header">
+            <div class="engage-title">Brand Sprint</div>
+            <div class="engage-meta">3–6 Weeks</div>
+          </div>
+          <p class="engage-desc-text">Positioning, naming, and messaging architecture. Resolves the gap between science and strategy before a fundraise or launch.</p>
         </div>
-        <p class="engage-desc-text">Positioning, naming, and messaging architecture. Resolves the gap between science and strategy before a fundraise or launch.</p>
-      </div>
 
-      <div class="engage-step">
-        <div class="engage-header">
-          <div class="engage-title">Identity &amp; Launch System</div>
-          <div class="engage-meta">Project-Based</div>
+        <div class="engage-step">
+          <div class="engage-header">
+            <div class="engage-title">Identity &amp; Launch System</div>
+            <div class="engage-meta">Project-Based</div>
+          </div>
+          <p class="engage-desc-text">Full visual brand system for clinical and commercial use. Scaled from product launches to major conferences, priced per deliverable.</p>
         </div>
-        <p class="engage-desc-text">Full visual brand system for clinical and commercial use. Scaled from product launches to major conferences, priced per deliverable.</p>
-      </div>
 
-      <div class="engage-step">
-        <div class="engage-header">
-          <div class="engage-title">Strategic Brand Retainer</div>
-          <div class="engage-meta">Advisory Retainer</div>
+        <div class="engage-step">
+          <div class="engage-header">
+            <div class="engage-title">Strategic Brand Retainer</div>
+            <div class="engage-meta">Monthly Retainer</div>
+          </div>
+          <p class="engage-desc-text">Ongoing monthly strategic input and access to clinical advisory. For teams wanting a senior thinking partner, not a production agency.</p>
         </div>
-        <p class="engage-desc-text">Ongoing monthly strategic input and access to clinical advisory. For teams wanting a senior thinking partner, not a production agency.</p>
       </div>
     </div>
   </div>
