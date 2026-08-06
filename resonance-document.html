@@ -251,21 +251,48 @@
     .doc-footer-cta { text-align: left; }
   }
   
+  @page {
+    margin: 2.2cm 2cm;
+  }
+
   @media print {
-    @page {
-      margin: 0;
-    }
     body {
       background: #fff;
+      color: #000;
       margin: 0;
       padding: 0;
     }
     .page {
-      padding: 80px 70px;
+      padding: 0;
       max-width: 100%;
       border: none;
       box-shadow: none;
       margin: 0;
+    }
+    .section {
+      display: block;
+      margin-bottom: 40px;
+      page-break-inside: auto;
+      break-inside: auto;
+    }
+    .section-sidebar {
+      width: 100%;
+      margin-bottom: 12px;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+    .section-content {
+      width: 100%;
+    }
+    .section-title {
+      position: static;
+      font-size: 0.85rem;
+      border-bottom: 1px solid #0e4a3a;
+      padding-bottom: 4px;
+    }
+    .item-block, .service-item, .engage-step, .thesis, .doc-header, .doc-footer {
+      page-break-inside: avoid;
+      break-inside: avoid;
     }
     .doc-footer-cta a {
       color: #0e4a3a;
